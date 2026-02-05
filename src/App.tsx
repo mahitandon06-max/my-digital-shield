@@ -11,6 +11,7 @@ import PatientConsent from "./pages/PatientConsent";
 import PatientAudit from "./pages/PatientAudit";
 import DoctorDashboard from "./pages/DoctorDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import Settings from "./pages/Settings";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,9 @@ const App = () => (
             <Route path="/patient/audit" element={<PatientAudit />} />
             <Route path="/doctor" element={<DoctorDashboard />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/patient/settings" element={<Settings />} />
+            <Route path="/doctor/settings" element={<Settings />} />
+            <Route path="/admin/settings" element={<Settings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
